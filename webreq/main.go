@@ -13,6 +13,7 @@ func main() {
 
 	if err != nil {
 		fmt.Println("Error while making get request", err)
+		return
 	}
 
 	defer res.Body.Close()
@@ -24,6 +25,7 @@ func main() {
 
 	if err1 != nil {
 		fmt.Println("Error while Getting body from the response", err1)
+		return
 	}
 
 	fmt.Println("Data", string(data))
